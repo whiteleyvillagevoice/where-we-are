@@ -1,13 +1,7 @@
 name = "where-we-are"
-main = "_worker.js"
+pages_build_output_dir = "./public"
 compatibility_date = "2026-07-22"
-
-[assets]
-directory = "./public"
-binding = "ASSETS"
 
 [[kv_namespaces]]
 binding = "PLANNER"
-# ▼▼▼ REPLACE the text inside the quotes below with your namespace ID ▼▼▼
 id = "1c05723fc1af4e03a5524079d273d8b0"
-# ▲▲▲ keep the quote marks. Find the ID in Cloudflare: Storage & Databases → KV ▲▲▲
