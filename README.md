@@ -1,4 +1,4 @@
-// Single Worker: serves our personal planner page and handles the shared-storage API.
+// Single Worker: serves our own personal planner page and handles the shared-storage API.
 // This is the Workers "static assets" model - one Worker in front of the files.
 //
 // Bindings it expects (declared in wrangler.toml):
