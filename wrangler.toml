@@ -1,4 +1,4 @@
-name = "where-we-are"
+name = "ch-and-ss-planner"
 main = "_worker.js"
 compatibility_date = "2026-07-22"
 
