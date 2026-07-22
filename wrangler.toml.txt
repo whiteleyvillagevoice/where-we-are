@@ -1,0 +1,40 @@
+# Where we are - the shared planner
+
+This version runs as a single Cloudflare Worker that both serves the page and
+stores the shared plans. Deployed from GitHub, so any change you commit goes
+live automatically.
+
+## Repo layout (must be exactly this)
+
+    where-we-are/
+    ├── _worker.js         the Worker: serves the page + runs the storage API
+    ├── wrangler.toml      config, including the KV storage binding
+    └── public/
+        └── index.html     the planner page itself
+
+The two things that matter: index.html sits INSIDE a folder called `public`,
+and `_worker.js` + `wrangler.toml` sit at the TOP level next to it.
+
+## One thing you must fill in
+
+Open `wrangler.toml` and replace PASTE_YOUR_NAMESPACE_ID_HERE with your KV
+namespace's ID. Find the ID in the Cloudflare dashboard under
+Storage & Databases -> KV, next to your namespace (a long hex string, not the
+name). Keep the quote marks around it.
+
+## Deploying
+
+Connect the repo under Workers & Pages -> Create. Because wrangler.toml already
+declares the KV binding, you do NOT need to add a binding by hand in the
+dashboard - that's the step that kept failing, and this avoids it entirely.
+
+## Checking it worked
+
+Visit YOUR-ADDRESS/api/state - it should show {"needsSetup":true} as text.
+Then open the site itself: it asks you to set a shared password the first time.
+
+## Next August
+
+The Rothwell Primary term dates for 2026/27 are inside public/index.html, in the
+SCHOOL list near the top of the script. Send me next year's dates and I'll give
+you the block to replace.
